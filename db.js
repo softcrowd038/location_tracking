@@ -5,7 +5,7 @@ const mysqlPool = mysql.createPool({
   user: 'root',
   password: '1234',
   database: 'rutik',
-  port: "3306", 
+  port: '3306', 
 });
 
 
