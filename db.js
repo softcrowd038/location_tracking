@@ -1,7 +1,7 @@
 import mysql from "mysql2/promise"
 
 const mysqlPool = mysql.createPool({
-  host: 'localhost',
+  host: '127.0.0.1',
   user: 'root',
   password: '1234',
   database: 'rutik',
