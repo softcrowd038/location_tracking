@@ -1,4 +1,3 @@
-
 import colors from 'colors';
 import morgan from 'morgan';
 import express from 'express';
@@ -6,7 +5,7 @@ import dotenv from 'dotenv';
 import mysqlPool from './db.js'; 
 import locationRoutes from './routes/LocationRoutes.js'; 
 
-dotenv.config();
+dotenv.config(); // Load environment variables
 const app = express();
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
@@ -15,6 +14,7 @@ app.use(express.json());
 app.use("/api/v1/latlong", locationRoutes);
 
 const PORT = process.env.PORT || 8080;
+
 mysqlPool
   .getConnection()
   .then((connection) => {
